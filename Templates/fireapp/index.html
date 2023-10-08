@@ -16,6 +16,9 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Montserrat&family=Poppins:wght@500&display=swap" rel="stylesheet">
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -39,31 +42,8 @@
             <a class="nav-link" id="nav-link" href="home">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" id="nav-link" href="allfood">About Us<span class="sr-only">(current)</span></a>
+            <a class="nav-link" id="nav-link" href="#about-us">About Us<span class="sr-only">(current)</span></a>
           </li>
-          {% if request.session.CustId is not None and request.session.AdminId is None %}
-          <li class="nav-item active">
-            <a class="nav-link" id="nav-link" href="allcart"><i class="fas fa-shopping-cart" style="font-size:20px;"></i> Cart <span class="sr-only">(current)</span></a>
-          </li>
-          {% endif %}
-          {% if request.session.CustId is not None or request.session.AdminId is not None %}
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <i class="far fa-user-circle" style="font-size:20px;color:black;"></i>&nbsp;My Account
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-			{% if request.session.CustId is not None and request.session.AdminId is None %}
-              <a class="dropdown-item" href="getcustomer">Edit Profile</a>
-            <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="orders"><i class="fas fa-clipboard-list" style="font-size:20px;"></i>&nbsp;&nbsp;&nbsp;Orders</a>
-              <a class="dropdown-item" href="orders"><i class="fas fa-history" style="font-size:20px;"></i>&nbsp;&nbsp;Order History</a>
-            <div class="dropdown-divider"></div>
-			  {% endif %}
-              <a class="dropdown-item" style="background:red;width:1;border-radius:4px;" href="logout"><i class="fas fa-sign-out-alt" style="font-size:20px;color:white;"></i>&nbsp;&nbsp;<font color="white">Logout</font></a>
-            </div>
-          </li>
-          
-          {% endif %}
         </ul>
       </div>
     </nav>
@@ -80,32 +60,21 @@
           </form>
         </div>
       </div>
-      <div id="section-2">
-        <p id="heading">Fresh Food</p>
-        <h3>Our Restaurant !</h3>
-        <p id="title">Radish contains a lot of fiber, pectin and mineral salts.</p>
-        <div id="items">
-            <div class="item">
-                <div class="icon"><i class="fa fa-camera"></i></div>
-                <h3>Fresh Vegetables</h3>
-                <p>Use for cooking several types of vegetable oil.</p>
-            </div>
-            <div class="item">
-                <div class="icon"><i class="fa-rocket fa"></i></div>
-                <h3>High Quality</h3>
-                <p>This is the best source of essential fatty acids for the body.</p>
-            </div>
-            <div class="item">
-                <div class="icon"><i class="fab fa-twitter"></i></div>
-                <h3>Sale</h3>
-                <p>It is very good, if in the kitchen there will always be several bottles with different oils.</p>
-            </div>
-            <div class="item">
-                <div class="icon"><i class="fab fa-weixin"></i></div>
-                <h3>Best Price</h3>
-                <p>Remember that unrefined oils are not suitable for heat treatment.</p>
-            </div>
+
+      <!-- Abou us -->
+      <div id="section-2" id="about-us">
+        <p id="heading">Eyes In The Sky</p>
+        <h3>About Us !</h3>
+        <p id="title">"Let's save millions"</p>
+        <div id="items" style="font-size: 21px;font-family: 'Montserrat', sans-serif;">
+          Welcome to "Eyes In The Sky," where innovation meets environmental stewardship. Our mission is to harness the power of satellite imagery and cutting-edge data analytics to predict and prevent forest fires. We recognize the devastating impact of forest fires on ecosystems, wildlife, and communities, and we are committed to leveraging technology for proactive environmental protection.
+          At Eyes In The Sky, our primary goal is to develop a sophisticated system that utilizes satellite imagery for early detection of potential forest fires. By integrating data from various sources, including wind direction, we aim to not only identify the origin of fires but also predict their potential spread. Our mission goes beyond detection; we're working towards a comprehensive warning system that can provide timely alerts to communities at risk.
         </div>
+        <!--    Insert your image here    
+          <div id="about-image" style="float: right;">
+          <img src="{% static 'images/fire.png' %}" alt="About Us Image" style="width: 300px; height: auto;">
+        </div>
+        -->
       </div>
     </main>
 
@@ -121,14 +90,13 @@
                 <a class="ext-link" href="#">Terms & Conditions</a>
         </div>
         <div class="fo-cont-3">
-          Name:	Miss Jazmin Heller Jr.<br />
-          Phone:	38547800<br />
-          Company:	Collins-Harris<br />
-          Address	40 Tik Keung New Village Yik Ngoi Yai New Territories
+          Name:	Abhimanyu R B<br />
+          Phone:	9037084899<br />
+          Company:	Glitched Inn<br />
         </div>
       </div><hr style="background-color: grey;margin-top:0px;"/>Made with HTML5 & CSS.<br />
-      Made by Certified <b>PPS Friends</b> an RAR Group's.<br />
-      ©<script type='text/javascript'>var creditsyear = new Date();document.write(creditsyear.getFullYear());</script> <a class="ext-link" href="/"><b>EYES IN THE SKY</b></a> All Rights Reserved | RAR Group's
+      Made by Team <b>Glitched Inn</b> <br />
+      ©<script type='text/javascript'>var creditsyear = new Date();document.write(creditsyear.getFullYear());</script> <a class="ext-link" href="/"><b>EYES IN THE SKY</b></a> All Rights Reserved
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

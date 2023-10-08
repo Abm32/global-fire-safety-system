@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: csscolors
+Version: 1.0.3
+Summary: CSS Colors in hex color codes.
+Home-page: https://github.com/jakkes/py-csscolors
+Author: Jakob Stigenberg
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+
+# CSS Colors
+[![Build Status](http://drone.jakke.se/api/badges/jakkes/py-csscolors/status.svg)](http://drone.jakke.se/jakkes/py-csscolors)
+
+Simply all css colors easily accessible in hex color code.
+
+```python
+>>> import csscolors
+>>> csscolors.RED
+'#ff0000'
+```
+
+Also allows for iteration:
+```python
+>>> import csscolors
+>>> for color_name, hex_code in csscolors.iterator():
+...     print(color_name, hex_code)
+ALICE_BLUE #f0f8ff
+ANTIQUEWHITE #faebd7
+AQUA #00ffff
+AQUAMARINE #7fffd4
+AZURE #f0ffff
+BEIGE #f5f5dc
+BISQUE #ffe4c4
+BLACK #000000
+BLANCHED_ALMOND #ffebcd
+BLUE #0000ff
+...
+...
+...
+```
+
+## Install
+Install through `pip`:
+```bash
+pip install csscolors
+```
+
+
+## Documentation
+https://jakkes.github.io/py-csscolors/csscolors/
+
+

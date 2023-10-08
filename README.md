@@ -33,12 +33,9 @@ Together, let's build a future where the skies watch over our forests, and timel
 Homepage:<br>
 
 -----------------------------------------------
-`<url>/admin` (Database Backend)<br>
-id = 'cosmix' | pass = 'admin'<br>
-Register for admin login in database backend!!
-
+OPEN SOURCE
 -----------------------------------------------
-Register New account for login as user
+STILL IN DEVELOPMET
 -----------------------------------------------
 __Project Focus On :__ Python<br>
 ## A web application
@@ -46,5 +43,3 @@ __Project Focus On :__ Python<br>
 __Language Used:__
  + __frontend :__ #HTML, #CSS, #JS
  + __backend :__ #Python3 #Django #Sqlite3
-
-Extra Theme for app available in Template Test folder(used online Bootstrap)*

@@ -73,7 +73,7 @@
         <div id="banner-text">
           <h1>EYES IN THE SKY</h1>
           <p>Satellite fire detection and response</p>
-          <form class="search-box" id="image-upload-form" action="/upload" method="post" enctype="multipart/form-data">
+          <form class="search-box" id="image-upload-form" action="/upload/" method="post" enctype="multipart/form-data">
             {% csrf_token %}
             <input type="file" name="image" accept="image/*">
             <button class="search-btn" type="submit" name="button">Upload Image</button>

@@ -18,6 +18,7 @@ from django.urls import path
 from fireapp import views
 from django.conf import settings
 from django.conf.urls.static import static
+from fireapp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,7 +26,8 @@ urlpatterns = [
         # ---- HOME ---- 
         path('',views.fireapp), 
         path('home',views.fireapp),
-        #path('upload_image/', upload_image, name='upload_image'),
+        path('upload/', views.upload_image, name='upload_image'),
+        path('success/', views.success_page, name='success_page'),
 
             
 ]

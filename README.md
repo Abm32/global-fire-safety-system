@@ -34,7 +34,8 @@ Together, let's build a future where the skies watch over our forests, and timel
 
 
 Homepage:<br>
-
+![Front-page](.)
+![Code-snippets](.)
 -----------------------------------------------
 OPEN SOURCE
 -----------------------------------------------

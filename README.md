@@ -38,7 +38,7 @@ Homepage:<br>
 -----------------------------------------------
 OPEN SOURCE
 -----------------------------------------------
-STILL IN DEVELOPMET
+STILL IN DEVELOPMENT
 -----------------------------------------------
 __Project Focus On :__ Python<br>
 ## A web application

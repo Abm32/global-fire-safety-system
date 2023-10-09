@@ -43,7 +43,7 @@ OPEN SOURCE
 -----------------------------------------------
 STILL IN DEVELOPMENT
 -----------------------------------------------
-__Project Focus On :__ Python<br>
+__Project Focus On :__ Early Fire Warning using prediction model<br>
 ## A web application
 
 __Language Used:__
